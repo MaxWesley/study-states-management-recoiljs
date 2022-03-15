@@ -1,15 +1,11 @@
 import {
-  atom,
   useRecoilState
 } from 'recoil'
 
-const textState = atom({
-  key: 'textState',
-  default: ''
-});
+import { atom_textState } from './utils/atoms'
 
 function TextInput() {
-  const [text, setText] = useRecoilState(textState)
+  const [text, setText] = useRecoilState(atom_textState)
 
   const onChangeText = (event: any) => {
     setText(event.target.value)
@@ -29,6 +25,5 @@ function TextInput() {
 }
 
 export { 
-  TextInput,
-  textState as atom_textState
+  TextInput
 }

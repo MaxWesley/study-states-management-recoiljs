@@ -1,4 +1,4 @@
-import { atom_textState } from '../components/TextInput'
+import { atom_textState } from '../components/TextInput/utils/atoms'
 
 import {
   selector
